@@ -214,7 +214,7 @@ def _hand_key_for_pairs(cards: List[Card]) -> Union[str, int]:
         return calculate_hand_value(cards)
 
 ########################################################
-# 4. Most Important Deviations from the Table
+# 4. Top 50 Deviations Implementation
 ########################################################
 
 """
@@ -380,7 +380,7 @@ for key in UPDATED_INDEX_DEVIATIONS:
     UPDATED_INDEX_DEVIATIONS[key] = pos_devs + neg_devs
 
 ########################################################
-# 5. Revised Index-Based Deviation Function
+# 5. Index-Based Deviation Function
 ########################################################
 
 def revised_index_deviation(player_cards: List[Card],
@@ -413,7 +413,7 @@ def revised_index_deviation(player_cards: List[Card],
     return None
 
 ########################################################
-# 6. Comprehensive Handling of Insurance
+# 6. Handling of Insurance
 ########################################################
 
 def recommend_insurance(dealer_upcard: Card, card_counter: CardCounter) -> bool:
@@ -428,7 +428,7 @@ def recommend_insurance(dealer_upcard: Card, card_counter: CardCounter) -> bool:
     return False
 
 ########################################################
-# 7. Comprehensive Basic Strategy Integration
+# 7. Basic Strategy Integration
 ########################################################
 
 BASIC_STRATEGY = {
@@ -524,7 +524,7 @@ ACTION_DESCRIPTIONS = {
 }
 
 ########################################################
-# 9. Revised Action Recommendation Function
+# 9. Action Recommendation Function
 ########################################################
 
 def recommend_action_for_player_hand(
